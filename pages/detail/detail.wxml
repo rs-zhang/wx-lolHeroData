@@ -1,0 +1,38 @@
+<view class='detailWrap'>
+    <view class='bgs'>
+        <image class='pic' src='{{detail.bgs[index]}}'></image>
+        <view class='thumbs'>
+            <image class='thumbsPic' wx:for="{{detail.bgs_thumbnail}}" wx:key="{{index}}" src='{{item}}' data-index='{{index}}' bindtap='changeBgs'></image>
+        </view>
+    </view>
+
+    <view class='detail'>
+        <view class='left'>
+            <view class='name'>{{detail.name}}</view>
+            <view class='title'>{{detail.title}}</view>
+            <view class='tags'>
+                <button size='mini' wx:for="{{detail.tags}}" wx:key='{{index}}'>{{item}}</button>
+            </view>
+            <view class='ability'>
+                <text>生存能力</text>
+                <progress active percent='{{detail.Ability.life}}' color='#2C97DE'/>
+            </view>
+            <view class='ability'>
+                <text>物理攻击</text>
+                <progress active percent='{{detail.Ability.physical}}' color='#F2C500'/>
+            </view>
+            <view class='ability'>
+                <text>魔法攻击</text>
+                <progress active percent='{{detail.Ability.magic}}' color='#F59D00'/>
+            </view>
+            <view class='ability'>
+                <text>操作难度</text>
+                <progress active percent='{{detail.Ability.difficulty}}' color='#1ECA6B'/>
+            </view>
+        </view>
+        <view class='right'>
+            <view class='titleText'>背景故事：</view>
+            <view class='story'>{{detail.story}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+.list {
+  width: 750rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list .listItem {
+  flex-basis: 250rpx;
+  height: 280rpx;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.list .listItem image {
+  width: 100%
+}

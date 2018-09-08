@@ -1,0 +1,6 @@
+<view class="list">
+  <navigator url='../detail/detail?id={{item.id}}' wx:for="{{list}}" wx:key="{{item.id}}" class='listItem'>
+    <image src='{{item.iconUrl}}' mode='scaleToFill'></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
